@@ -22,10 +22,10 @@ const (
 ########   #######   #######  ######## ######## ##     ## ##    ##  ######
 */
 
-// BoolVal returns the value of environment variable `name` as a bool or the supplied default value `defaultVal` if the environment variable does not exist.
-func BoolVal(name string, defaultVal bool) bool {
+// BoolVal returns the value of environment variable envName as a bool or the supplied default value defaultVal if the environment variable does not exist.
+func BoolVal(envName string, defaultVal bool) bool {
 	retVal := defaultVal
-	envVal, envExists := os.LookupEnv(name)
+	envVal, envExists := os.LookupEnv(envName)
 	if envExists {
 		retVal, _ = strconv.ParseBool(envVal)
 	}
@@ -42,10 +42,10 @@ func BoolVal(name string, defaultVal bool) bool {
 ##    ##  #######  ##     ## ######## ##     ## ####  ######   ######
 */
 
-// IntVal returns the value of environment variable `name` as an int or the supplied default value `defaultVal` if the environment variable does not exist.
-func IntVal(name string, defaultVal int) int {
+// IntVal returns the value of environment variable envName as an int or the supplied default value defaultVal if the environment variable does not exist.
+func IntVal(envName string, defaultVal int) int {
 	retVal := defaultVal
-	envVal, envExists := os.LookupEnv(name)
+	envVal, envExists := os.LookupEnv(envName)
 	if envExists {
 		intVal, _ := strconv.Atoi(envVal)
 		retVal = int(intVal)
@@ -53,10 +53,10 @@ func IntVal(name string, defaultVal int) int {
 	return retVal
 }
 
-// UintVal returns the value of environment variable `name` as an uint or the supplied default value `defaultVal` if the environment variable does not exist.
-func UintVal(name string, defaultVal uint) uint {
+// UintVal returns the value of environment variable envName as an uint or the supplied default value defaultVal if the environment variable does not exist.
+func UintVal(envName string, defaultVal uint) uint {
 	retVal := defaultVal
-	envVal, envExists := os.LookupEnv(name)
+	envVal, envExists := os.LookupEnv(envName)
 	if envExists {
 		intVal, _ := strconv.Atoi(envVal)
 		retVal = uint(intVal)
@@ -74,10 +74,10 @@ func UintVal(name string, defaultVal uint) uint {
  ######     ##    ##     ## #### ##    ##  ######    ######
 */
 
-// StringVal returns the value of environment variable `name` as a string or the supplied default value `defaultVal` if the environment variable does not exist.
-func StringVal(name string, defaultVal string) string {
+// StringVal returns the value of environment variable envName as a string or the supplied default value defaultVal if the environment variable does not exist.
+func StringVal(envName string, defaultVal string) string {
 	retVal := defaultVal
-	envVal, envExists := os.LookupEnv(name)
+	envVal, envExists := os.LookupEnv(envName)
 	if envExists {
 		retVal = envVal
 	}
