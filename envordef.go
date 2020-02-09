@@ -9,7 +9,7 @@ import (
 
 const (
 	moduleName    string = "envordef"
-	moduleVersion string = "0.1.0-dev"
+	moduleVersion string = "0.1.0"
 )
 
 /*
