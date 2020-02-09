@@ -42,6 +42,28 @@ func BoolVal(envName string, defaultVal bool) bool {
 ##    ##  #######  ##     ## ######## ##     ## ####  ######   ######
 */
 
+// Float32Val returns the value of environment variable envName as a float32 or the supplied default value defaultVal if the environment variable does not exist.
+func Float32Val(envName string, defaultVal float32) float32 {
+	retVal := defaultVal
+	envVal, envExists := os.LookupEnv(envName)
+	if envExists {
+		floatVal, _ := strconv.ParseFloat(envVal, 32)
+		retVal = float32(floatVal)
+	}
+	return retVal
+}
+
+// Float64Val returns the value of environment variable envName as a float64 or the supplied default value defaultVal if the environment variable does not exist.
+func Float64Val(envName string, defaultVal float64) float64 {
+	retVal := defaultVal
+	envVal, envExists := os.LookupEnv(envName)
+	if envExists {
+		floatVal, _ := strconv.ParseFloat(envVal, 64)
+		retVal = float64(floatVal)
+	}
+	return retVal
+}
+
 // IntVal returns the value of environment variable envName as an int or the supplied default value defaultVal if the environment variable does not exist.
 func IntVal(envName string, defaultVal int) int {
 	retVal := defaultVal
