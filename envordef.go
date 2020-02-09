@@ -108,6 +108,50 @@ func UintVal(envName string, defaultVal uint) uint {
 	return retVal
 }
 
+// Uint8Val returns the value of environment variable envName as an uint or the supplied default value defaultVal if the environment variable does not exist.
+func Uint8Val(envName string, defaultVal uint8) uint8 {
+	retVal := defaultVal
+	envVal, envExists := os.LookupEnv(envName)
+	if envExists {
+		intVal, _ := strconv.Atoi(envVal)
+		retVal = uint8(intVal)
+	}
+	return retVal
+}
+
+// Uint16Val returns the value of environment variable envName as an uint or the supplied default value defaultVal if the environment variable does not exist.
+func Uint16Val(envName string, defaultVal uint16) uint16 {
+	retVal := defaultVal
+	envVal, envExists := os.LookupEnv(envName)
+	if envExists {
+		intVal, _ := strconv.Atoi(envVal)
+		retVal = uint16(intVal)
+	}
+	return retVal
+}
+
+// Uint32Val returns the value of environment variable envName as an uint or the supplied default value defaultVal if the environment variable does not exist.
+func Uint32Val(envName string, defaultVal uint32) uint32 {
+	retVal := defaultVal
+	envVal, envExists := os.LookupEnv(envName)
+	if envExists {
+		intVal, _ := strconv.Atoi(envVal)
+		retVal = uint32(intVal)
+	}
+	return retVal
+}
+
+// Uint64Val returns the value of environment variable envName as an uint or the supplied default value defaultVal if the environment variable does not exist.
+func Uint64Val(envName string, defaultVal uint64) uint64 {
+	retVal := defaultVal
+	envVal, envExists := os.LookupEnv(envName)
+	if envExists {
+		intVal, _ := strconv.Atoi(envVal)
+		retVal = uint64(intVal)
+	}
+	return retVal
+}
+
 /*
  ######  ######## ########  #### ##    ##  ######    ######
 ##    ##    ##    ##     ##  ##  ###   ## ##    ##  ##    ##
