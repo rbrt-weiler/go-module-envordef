@@ -66,6 +66,16 @@ func Float64Val(envName string, defaultVal float64) float64 {
 	return retVal
 }
 
+/*
+#### ##    ## ########  ######
+ ##  ###   ##    ##    ##    ##
+ ##  ####  ##    ##    ##
+ ##  ## ## ##    ##     ######
+ ##  ##  ####    ##          ##
+ ##  ##   ###    ##    ##    ##
+#### ##    ##    ##     ######
+*/
+
 // IntVal returns the value of environment variable envName as an int or the supplied default value defaultVal if the environment variable does not exist.
 func IntVal(envName string, defaultVal int) int {
 	retVal := defaultVal
@@ -76,16 +86,6 @@ func IntVal(envName string, defaultVal int) int {
 	}
 	return retVal
 }
-
-/*
-#### ##    ## ########  ######
- ##  ###   ##    ##    ##    ##
- ##  ####  ##    ##    ##
- ##  ## ## ##    ##     ######
- ##  ##  ####    ##          ##
- ##  ##   ###    ##    ##    ##
-#### ##    ##    ##     ######
-*/
 
 // Int8Val returns the value of environment variable envName as an int8 or the supplied default value defaultVal if the environment variable does not exist.
 func Int8Val(envName string, defaultVal int8) int8 {
