@@ -35,13 +35,13 @@ func BoolVal(envName string, defaultVal bool) bool {
 }
 
 /*
-##    ## ##     ## ##     ## ######## ########  ####  ######   ######
-###   ## ##     ## ###   ### ##       ##     ##  ##  ##    ## ##    ##
-####  ## ##     ## #### #### ##       ##     ##  ##  ##       ##
-## ## ## ##     ## ## ### ## ######   ########   ##  ##        ######
-##  #### ##     ## ##     ## ##       ##   ##    ##  ##             ##
-##   ### ##     ## ##     ## ##       ##    ##   ##  ##    ## ##    ##
-##    ##  #######  ##     ## ######## ##     ## ####  ######   ######
+######## ##        #######     ###    ########  ######
+##       ##       ##     ##   ## ##      ##    ##    ##
+##       ##       ##     ##  ##   ##     ##    ##
+######   ##       ##     ## ##     ##    ##     ######
+##       ##       ##     ## #########    ##          ##
+##       ##       ##     ## ##     ##    ##    ##    ##
+##       ########  #######  ##     ##    ##     ######
 */
 
 // Float32Val returns the value of environment variable envName as a float32 or the supplied default value defaultVal if the environment variable does not exist.
@@ -76,6 +76,16 @@ func IntVal(envName string, defaultVal int) int {
 	}
 	return retVal
 }
+
+/*
+#### ##    ## ########  ######
+ ##  ###   ##    ##    ##    ##
+ ##  ####  ##    ##    ##
+ ##  ## ## ##    ##     ######
+ ##  ##  ####    ##          ##
+ ##  ##   ###    ##    ##    ##
+#### ##    ##    ##     ######
+*/
 
 // Int8Val returns the value of environment variable envName as an int8 or the supplied default value defaultVal if the environment variable does not exist.
 func Int8Val(envName string, defaultVal int8) int8 {
@@ -120,6 +130,16 @@ func Int64Val(envName string, defaultVal int64) int64 {
 	}
 	return retVal
 }
+
+/*
+##     ## #### ##    ## ########  ######
+##     ##  ##  ###   ##    ##    ##    ##
+##     ##  ##  ####  ##    ##    ##
+##     ##  ##  ## ## ##    ##     ######
+##     ##  ##  ##  ####    ##          ##
+##     ##  ##  ##   ###    ##    ##    ##
+ #######  #### ##    ##    ##     ######
+*/
 
 // UintVal returns the value of environment variable envName as an uint or the supplied default value defaultVal if the environment variable does not exist.
 func UintVal(envName string, defaultVal uint) uint {
