@@ -9,7 +9,7 @@ import (
 
 const (
 	moduleName    string = "envordef"
-	moduleVersion string = "0.1.0"
+	moduleVersion string = "0.1.1"
 	moduleURL     string = "https://gitlab.com/rbrt-weiler/go-module-envordef"
 )
 
