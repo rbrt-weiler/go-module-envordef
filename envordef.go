@@ -4,6 +4,6 @@ package envordef
 
 const (
 	moduleName    string = "envordef"
-	moduleVersion string = "0.1.1"
+	moduleVersion string = "0.1.2"
 	moduleURL     string = "https://gitlab.com/rbrt-weiler/go-module-envordef"
 )
